@@ -4,7 +4,17 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title BbsExample
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
   %body
-    = yield
+    %header.header
+      %h1 bbs example application
+    %main.main
+      %aside.navigation.navigation--left
+        = cell('bbs/category')
+      .contents
+        = yield
+      %aside.navigation.navigation--right
+        = cell('bbs/latest_topics')
+    %footer.footer
+      footer contents
