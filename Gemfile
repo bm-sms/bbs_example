@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'bbs', path: '../bbs'
+gem 'bootstrap-sass'
 gem 'coffee-rails'
 gem 'devise'
 gem 'haml-rails'
