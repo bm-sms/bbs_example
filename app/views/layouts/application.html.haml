@@ -1,20 +1,48 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title BbsExample
+    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+    %title BBS Example
     = csrf_meta_tags
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
+
   %body
-    %header.header
-      %h1 bbs example application
-    %main.main
-      %aside.navigation.navigation--left
-        = cell('bbs/category')
-      .contents
-        = yield
-      %aside.navigation.navigation--right
-        = cell('bbs/latest_topics')
-    %footer.footer
-      footer contents
+    %nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle(type='button'){data: {toggle: 'collapse', target: '#myNavbar'}}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand(href='#') Logo
+        .collapse.navbar-collapse(id='myNavbar')
+          %ul.nav.navbar-nav
+            %li.active
+              = link_to 'Home', '/'
+          %form.navbar-form.navbar-right(role='search')
+            .form-group.input-group
+              %input.form-control(type='text' placeholder='Search..')
+              %span.input-group-btn
+                %button.btn.btn-default(type='button')
+                  %span.glyphicon.glyphicon-search
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a(href='#')
+                %span.glyphicon.glyphicon-user アカウント
+
+    .container.text-center
+      .row
+        .col-sm-3.well
+          .well
+            = cell('bbs/category')
+
+        .col-sm-7
+          = yield
+
+        .col-sm-2.well
+          .well
+            = cell('bbs/latest_topics')
+
+    %footer.container-fluid.text-center
+      %p Footer Text
