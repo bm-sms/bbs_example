@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'activeadmin', github: 'activeadmin'
 gem 'bbs', path: '../bbs'
 gem 'bootstrap-sass'
 gem 'coffee-rails'
 gem 'devise'
 gem 'haml-rails'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'jquery-rails'
 gem 'normalize-rails'
 gem 'pg'
