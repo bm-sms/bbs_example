@@ -28,15 +28,6 @@ GIT
       responders
 
 PATH
-  remote: ../active_admin_bbs
-  specs:
-    active_admin_bbs (0.1.0)
-      activeadmin
-      bbs
-      inherited_resources
-      rails (~> 5.0.0, >= 5.0.0.1)
-
-PATH
   remote: ../bbs
   specs:
     bbs (0.1.0)
@@ -73,6 +64,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_admin_bbs (0.1.0)
+      activeadmin
+      bbs
+      inherited_resources
+      rails (~> 5.0.0, >= 5.0.0.1)
     activejob (5.0.0.1)
       activesupport (= 5.0.0.1)
       globalid (>= 0.3.6)
@@ -283,7 +279,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_admin_bbs!
+  active_admin_bbs
   activeadmin!
   bbs!
   bootstrap-sass
