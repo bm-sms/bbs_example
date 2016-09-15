@@ -28,6 +28,15 @@ GIT
       responders
 
 PATH
+  remote: ../active_admin_bbs
+  specs:
+    active_admin_bbs (0.1.0)
+      activeadmin
+      bbs
+      inherited_resources
+      rails (~> 5.0.0, >= 5.0.0.1)
+
+PATH
   remote: ../bbs
   specs:
     bbs (0.1.0)
@@ -274,6 +283,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin_bbs!
   activeadmin!
   bbs!
   bootstrap-sass

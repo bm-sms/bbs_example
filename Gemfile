@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'activeadmin', github: 'activeadmin'
+gem 'active_admin_bbs', path: '../active_admin_bbs'
 gem 'bbs', path: '../bbs'
 gem 'bootstrap-sass'
 gem 'coffee-rails'
