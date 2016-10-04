@@ -40,6 +40,9 @@
             = cell('bbs/category')
 
         .col-sm-7
+          .bbs-breadcrumbs
+            = breadcrumbs separator: ' &rsaquo; '
+
           = yield
 
         .col-sm-2.well
