@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/bm-sms/active_admin_bbs.git
-  revision: 8dd5be4d23dbcc545b8963c32e93831479ee01f7
+  revision: 77d24ba52e82eaa36664edbf16236f6db751f58d
   specs:
     active_admin_bbs (0.1.0)
       activeadmin
