@@ -40,8 +40,9 @@ GIT
       inherited_resources
       rails (~> 5.0.0, >= 5.0.0.1)
 
-PATH
-  remote: ../bbs
+GIT
+  remote: git://github.com/bm-sms/bbs.git
+  revision: 9d609e3758070fc5153f376c71e3d93bf0dd92b9
   specs:
     bbs (0.1.0)
       bourbon
@@ -95,7 +96,7 @@ GEM
       tzinfo (~> 1.1)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
-    arel (7.1.2)
+    arel (7.1.4)
     autoprefixer-rails (6.4.1.1)
       execjs
     bcrypt (3.1.11)
@@ -326,4 +327,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.12.5
+   1.13.3
