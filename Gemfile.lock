@@ -42,7 +42,7 @@ GIT
 
 GIT
   remote: git://github.com/bm-sms/bbs.git
-  revision: 9d609e3758070fc5153f376c71e3d93bf0dd92b9
+  revision: 0b5e04b80c36c9a0f980edac5cb6863296526422
   specs:
     bbs (0.1.0)
       bourbon
@@ -158,7 +158,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
-    hamlit (2.7.2)
+    hamlit (2.7.3)
       temple (~> 0.7.6)
       thor
       tilt
