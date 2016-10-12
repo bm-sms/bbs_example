@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+    %meta{name: 'viewport', content: 'width=device-width, minimum-scale=1, initial-scale=1'}
+    %title BBS Example
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+
+    = yield :head
+  %body
+    %nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle(type='button'){data: {toggle: 'collapse', target: '#myNavbar'}}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand(href='#') Logo
+        .collapse.navbar-collapse(id='myNavbar')
+          %ul.nav.navbar-nav
+            %li.active
+              = link_to 'Home', '/'
+
+    .container
+      .row
+        .col-sm-12
+          = yield
+
+    %footer.container-fluid.text-center
+      %p Footer Text
