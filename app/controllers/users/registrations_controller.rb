@@ -1,4 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  layout 'devise'
+
   before_action :configure_sign_up_params, only: [:create]
 
   protected
