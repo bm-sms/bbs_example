@@ -32,6 +32,8 @@
             %li
               = link_to bbs.edit_profile_path do
                 %span.glyphicon.glyphicon-user アカウント
+            %li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete
 
     .container
       .row
