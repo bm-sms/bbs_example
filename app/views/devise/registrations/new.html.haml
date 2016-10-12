@@ -3,18 +3,18 @@
   = devise_error_messages!
   .field
     = f.label :email
-    %br/
+    %br
     = f.email_field :email, autofocus: true
   .field
     = f.label :password
     - if @minimum_password_length
       %em
         (#{@minimum_password_length} characters minimum)
-    %br/
+    %br
     = f.password_field :password, autocomplete: "off"
   .field
     = f.label :password_confirmation
-    %br/
+    %br
     = f.password_field :password_confirmation, autocomplete: "off"
   .actions
     = f.submit "Sign up"
