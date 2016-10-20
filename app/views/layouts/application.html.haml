@@ -29,11 +29,15 @@
                 %button.btn.btn-default(type='button')
                   %span.glyphicon.glyphicon-search
           %ul.nav.navbar-nav.navbar-right
-            %li
-              = link_to bbs.edit_profile_path do
-                %span.glyphicon.glyphicon-user アカウント
-            %li
-              = link_to 'ログアウト', main_app.destroy_user_session_path, method: :delete
+            - if user_signed_in?
+              %li
+                = link_to bbs.edit_profile_path do
+                  %span.glyphicon.glyphicon-user アカウント
+              %li
+                = link_to 'ログアウト', main_app.destroy_user_session_path, method: :delete
+            - else
+              %li
+                = link_to 'ログイン', main_app.new_user_session_path
 
     .container
       .row
