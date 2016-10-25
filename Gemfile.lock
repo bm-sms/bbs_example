@@ -42,7 +42,7 @@ GIT
 
 GIT
   remote: git://github.com/bm-sms/bbs.git
-  revision: a49b20a4c4b8f1ad90aff4a55b9ee7e36ee3e5e9
+  revision: 4ba10059780e1565159bbef30e103fc7d8797277
   specs:
     bbs (0.1.0)
       bourbon
