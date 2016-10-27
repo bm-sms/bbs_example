@@ -1,0 +1,10 @@
+.flash-messages
+  - flash.each do |name, messages|
+    %ul(class="#{name}")
+      - if messages.is_a?(Array)
+        - messages.each do |message|
+          %li
+            %span= message
+      - else
+        %li
+          %span= messages
