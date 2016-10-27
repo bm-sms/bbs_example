@@ -1,10 +1,9 @@
-.flash-messages
-  - flash.each do |name, messages|
-    %ul(class="#{name}")
-      - if messages.is_a?(Array)
-        - messages.each do |message|
-          %li
-            %span= message
-      - else
-        %li
-          %span= messages
+- flash.each do |name, messages|
+  .alert(class="alert-#{name}")
+    %a.close(href='#'){data: {dissmiss: 'alert'}, aria: {label: 'close'}} &times;
+
+    - if messages.is_a?(Array)
+      - messages.each do |message|
+        %span= message
+    - else
+      %span= messages
