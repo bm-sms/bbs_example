@@ -26,6 +26,8 @@
     .container
       .row
         .col-sm-12
+          = render partial: 'shared/flash'
+
           = yield
 
     %footer.container-fluid.text-center
