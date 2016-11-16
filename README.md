@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 動かし方
 
-Things you may want to cover:
+サービスのビルドとマイグレーションを実行する。
+```bash
+$ docker-compose build web
+$ docker-compose run web bin/rails db:create db:migrate db:seed
+```
 
-* Ruby version
+コンテナを起動する。
+```bash
+$ docker-compose up
+```
 
-* System dependencies
+## セットアップ
+### カテゴリを作成する
 
-* Configuration
+http://localhost:3000/admin をブラウザで開き、以下の管理者アカウントでログインする:
+User: admin@example.com
+Password: password
 
-* Database creation
+ヘッダの `Bbs Category` をクリックして、カテゴリを作成する。
 
-* Database initialization
+### アバターアイコン画像のアップロード
 
-* How to run the test suite
+管理者アカウントでログインし `Bbs Avatar` をクリックする。
+アバターアイコン画像は 48px x 48px のものを使用する。
 
-* Services (job queues, cache servers, search engines, etc.)
+ここまで完了したら http://localhost:3000 にアクセスして、ユーザを登録しトピック、
+コメントを投稿することができるはず。
 
-* Deployment instructions
-
-* ...
+## 依存ライブラリなど
+- ActiveAdmin
+- devise
+- bbs
+- active_admin_bbs
