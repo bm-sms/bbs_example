@@ -27,33 +27,6 @@ GIT
       railties (>= 3.2, < 5.1)
       responders
 
-GIT
-  remote: git://github.com/bm-sms/active_admin_bbs.git
-  revision: 77d24ba52e82eaa36664edbf16236f6db751f58d
-  specs:
-    active_admin_bbs (0.1.0)
-      activeadmin
-      bbs
-      chartkick
-      groupdate
-      i18n
-      inherited_resources
-      rails (~> 5.0.0, >= 5.0.0.1)
-
-GIT
-  remote: git://github.com/bm-sms/bbs.git
-  revision: 73cdf1427406b94eca7490b0bed6840eeef5d84a
-  specs:
-    bbs (0.1.0)
-      bourbon
-      cells-hamlit
-      cells-rails
-      gretel
-      kaminari
-      paperclip
-      rails (~> 5.0.0, >= 5.0.0.1)
-      rails-i18n
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,6 +53,14 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_admin_bbs (1.0.0)
+      activeadmin
+      bbs (~> 1.0.0)
+      chartkick
+      groupdate
+      i18n
+      inherited_resources
+      rails (~> 5.0.0, >= 5.0.0.1)
     activejob (5.0.0.1)
       activesupport (= 5.0.0.1)
       globalid (>= 0.3.6)
@@ -99,6 +80,15 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.4.1.1)
       execjs
+    bbs (1.0.0)
+      bourbon
+      cells-hamlit
+      cells-rails
+      gretel
+      kaminari
+      paperclip
+      rails (~> 5.0.0, >= 5.0.0.1)
+      rails-i18n
     bcrypt (3.1.11)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -108,9 +98,9 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (9.0.5)
-    cells (4.1.3)
+    cells (4.1.4)
       tilt (>= 1.4, < 3)
-      uber (>= 0.0.9)
+      uber (>= 0.1.0, < 0.2.0)
     cells-hamlit (0.2.0)
       cells (~> 4.0)
       hamlit
@@ -148,7 +138,7 @@ GEM
       activesupport (>= 4.1.0)
     gretel (3.0.9)
       rails (>= 3.1.0)
-    groupdate (3.0.2)
+    groupdate (3.1.1)
       activesupport (>= 3)
     haml (4.0.7)
       tilt
@@ -286,7 +276,7 @@ GEM
     tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uber (0.0.15)
+    uber (0.1.0)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
     warden (1.2.6)
@@ -304,9 +294,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_admin_bbs!
+  active_admin_bbs (~> 1.0.0)
   activeadmin!
-  bbs!
+  bbs (~> 1.0.0)
   bootstrap-sass
   byebug
   coffee-rails
