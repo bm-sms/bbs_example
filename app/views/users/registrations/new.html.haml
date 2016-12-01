@@ -25,7 +25,7 @@
       = p.label :avatar_url
       %br
       = p.collection_radio_buttons :avatar_id, Bbs::Avatar.all, :id, :id do |r|
-        = r.label { r.radio_button(style: 'width: 1em') + image_tag(r.object.avatar.url(:medium)) }
+        = r.label { r.radio_button(style: 'width: 1em') + image_tag(r.object.image.url(:medium)) }
 
     .field
       = p.label :nickname
