@@ -5,7 +5,7 @@
 サービスのビルドとマイグレーションを実行する。
 ```bash
 $ docker-compose build web
-$ docker-compose run web bin/rails db:create db:migrate db:seed
+$ docker-compose run web bin/setup
 ```
 
 コンテナを起動する。
