@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028081650) do
+ActiveRecord::Schema.define(version: 20170208043141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20161028081650) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "bbs_avatars", force: :cascade do |t|
+  create_table "avatars", force: :cascade do |t|
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -79,39 +79,20 @@ ActiveRecord::Schema.define(version: 20161028081650) do
     t.integer  "author_id"
   end
 
-  create_table "bbs_user_profiles", force: :cascade do |t|
+  create_table "user_profiles", force: :cascade do |t|
     t.integer  "user_id",    null: false
+    t.integer  "avatar_id",  null: false
     t.string   "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "avatar_id"
-  end
-
-  create_table "bbs_users", force: :cascade do |t|
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.index ["email"], name: "index_bbs_users_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_bbs_users_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "email",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "bbs_comments", "bbs_topics", column: "topic_id"
   add_foreign_key "bbs_topics", "bbs_categories", column: "category_id"
-  add_foreign_key "bbs_user_profiles", "bbs_users", column: "user_id"
+  add_foreign_key "user_profiles", "users"
 end
