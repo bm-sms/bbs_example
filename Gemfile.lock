@@ -53,7 +53,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active_admin_bbs (1.1.0)
+    active_admin_bbs (1.1.1)
       activeadmin
       bbs (~> 1.1.0)
       chartkick
