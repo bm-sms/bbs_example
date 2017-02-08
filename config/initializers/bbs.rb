@@ -6,7 +6,7 @@ Bbs.configure do |config|
   # If you set value `false`, never clamp line.
   #config.clamp_article_body = 10
 
-  # spedify sign in path
+  # specify sign in path
   #config.login_path = '/users/sign_in'
 
   # set number of latest topics inside component
@@ -17,6 +17,9 @@ Bbs.configure do |config|
 
   # set number of topics per page
   #config.comments_per_page = 10
+
+  # required: set user class name
+  #config.user_class = 'User'
 
   # set current_user method
   config.current_user = :current_user
